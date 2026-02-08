@@ -1,0 +1,5 @@
+{
+  "name": "Copy of Nexus User Management",
+  "description": "A comprehensive, enterprise-grade user management dashboard simulating a full-stack PostgreSQL environment. Features include RBAC (Role-Based Access Control), user lifecycle management, and AI-powered profile generation.",
+  "requestFramePermissions": []
+}
