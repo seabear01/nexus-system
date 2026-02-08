@@ -1,20 +1,46 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Nexus User Management System
 
-# Run and deploy your AI Studio app
+A comprehensive, full-stack User Management Dashboard built with TypeScript, React, and Express.
 
-This contains everything you need to run your app locally.
+## Features
 
-View your app in AI Studio: https://ai.studio/apps/drive/1NdWkcWNs65HaBW06A5evw5-ba_9PzQKu
+*   **User Management**: Create, read, update, and delete users.
+*   **RBAC (Role-Based Access Control)**: granular permission management system.
+*   **Authentication**: Login system (Mock/Real modes).
+*   **Content Management**: Built-in Blog editor and viewer.
+*   **AI Integration**: Generate user bios using Google Gemini API.
+*   **Profile Management**: Avatar uploads and profile editing.
+*   **Architecture**: 
+    *   **Frontend**: React 19, Tailwind CSS, Lucide Icons.
+    *   **Backend**: Node.js, Express, In-memory Store (Mock DB).
 
-## Run Locally
+## Project Structure
 
-**Prerequisites:**  Node.js
+*   `/frontend`: React application logic, pages, components.
+*   `/backend`: Express server and data store logic.
+*   `index.html`: Main entry point (SPA).
 
+## Getting Started
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+1.  **Install Dependencies**
+    ```bash
+    npm install
+    ```
+
+2.  **Start the Server**
+    *   For the frontend (if using Vite/Parcel):
+        ```bash
+        npm start
+        ```
+    *   For the backend:
+        ```bash
+        ts-node backend/index.ts
+        ```
+
+## Configuration
+
+*   **Mock vs Real API**: 
+    Edit `frontend/services/api.ts` and toggle `const USE_MOCK_API = true;` to switch between the browser-based mock database and the real Node.js backend.
+
+*   **Gemini API**:
+    To use AI features, ensure `process.env.API_KEY` is available or configure it in `frontend/services/geminiService.ts`.
